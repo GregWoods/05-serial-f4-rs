@@ -44,6 +44,7 @@ It contains my own well-tested opinions about tools and practices.
 
 | USB-to-serial | Black Pill 4 pin debug header |
 | --- | --- |
+| GND | GND |
 | SWCLK | SWSCK |
 | SWDIO | SWDIO |
 | 3.3V | 3V3 |
