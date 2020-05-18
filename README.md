@@ -1,6 +1,6 @@
 # stm32f4-05-serial
 
-![alt text](./docs/images/blackpill-serial-stlink "Hardware required")
+![Hardware required](./docs/images/blackpill-serial-stlink.jpg "Hardware required")
 
 A simple project which runs on the **stm32f411 black pill** board (should also work on the stm32f401 variant)
 
