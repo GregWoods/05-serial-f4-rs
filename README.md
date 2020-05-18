@@ -77,7 +77,7 @@ or
 
 ### Connect to the usb-to-serial adapter
 
-* Connect the USB-to-serial board to your PC and find its COM port in Deveice Manager (Windows)
+* Connect the USB-to-serial board to your PC and find its COM port in Device Manager (Windows)
 * Use a serial terminal to connect to the serial port at 19200 baud
 
 ### Run it
