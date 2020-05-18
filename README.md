@@ -23,7 +23,7 @@ It contains my own well-tested opinions about tools and practices.
 * If you use GitHub for your own repos, I recommend you install **[gh](https://github.com/cli/cli)** the GitHub command line interface
 * ```cargo install cargo-generate```
 
-# Hardware Requirements
+## Hardware Requirements
 
 * All hardware from aliexpress or your favorite Chinese parts stockist
 * A "**black pill**" board. Get the **stm32f411** board - It has more more memory and faster clock speed than the stm32f401. **Do not** get the black version of the "blue pill" stm32f103 board, as the code is substantially different. ($4)
