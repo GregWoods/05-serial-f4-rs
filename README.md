@@ -1,5 +1,7 @@
 # stm32f4-05-serial
 
+![alt text](./docs/images/blackpill-serial-stlink "Hardware required")
+
 A simple project which runs on the **stm32f411 black pill** board (should also work on the stm32f401 variant)
 
 It demonstrates the use of the USART functionality of **stm32f4xx_hal**
@@ -12,17 +14,27 @@ It contains my own well-tested opinions about tools and practices.
 
 * All hardware from aliexpress or your favorite Chinese parts stockist
 * A "**black pill**" board. Get the **stm32f411** board - It has more more memory and faster clock speed than the stm32f401. **Do not** get the black version of the "blue pill" stm32f103 board, as the code is substantially different. ($4)
+* An ST-Link V2, or clone ($2)
 * A USB to Serial board. Mine is based on a **CP2102** chip and uses a microUSB cable instead of plugging straight into the USB port ($1)
 * USB-C cable for the black pill
 * microUSB cablefor the CP2102 (if you bought the microUSB variant)
 * You will probably need to solder the pins to the 2 boards
-* Connect the USB-to-serial board to the black pill
+* Connect the ST-Link v2 to the Black Pill (used to upload and debug code)
 
-| USB-to-serial | Black Pill |
+| ST-Link V2 | Black Pill |
 | --- | --- |
 | Gnd | Gnd |
 | TXO | PA10 (USART1 RX) |
 | RXI | PA9 (USART1 TX) |
+
+* Connect the USB-to-serial board to the black pill
+
+| USB-to-serial | Black Pill 4 pin debug header |
+| --- | --- |
+| SWCLK | SWSCK |
+| SWDIO | SWDIO |
+| 3.3V | 3V3 |
+
 
 ## Install cargo-generate
 
