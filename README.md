@@ -1,6 +1,16 @@
 # stm32f4-05-serial example using Rust
 
-# Development Environment Prerequisites
+![Hardware required](./docs/images/blackpill-serial-stlink.jpg "Hardware required")
+
+A simple project which runs on the **stm32f411 black pill** board (should also work on the stm32f401 variant, although memory.x should be altered to reflect the lower memory of the 401 board)
+
+This repo demonstrates the use of the USART functionality of **stm32f4xx_hal**
+
+It is intended to be used as a template for use with ```cargo generate``
+
+It contains my own well-tested opinions about tools and practices. 
+
+## Development Environment Prerequisites
 
 * [VS Code](https://code.visualstudio.com/)
     * Extension: **Cortex-Debug**
@@ -12,17 +22,6 @@
 * [Serial terminal app](https://learn.adafruit.com/windows-tools-for-the-electrical-engineer/serial-terminal)
 * If you use GitHub for your own repos, I recommend you install **[gh](https://github.com/cli/cli)** the GitHub command line interface
 * ```cargo install cargo-generate```
-
-
-![Hardware required](./docs/images/blackpill-serial-stlink.jpg "Hardware required")
-
-A simple project which runs on the **stm32f411 black pill** board (should also work on the stm32f401 variant, although memory.x should be altered to reflect the lower memory of the 401 board)
-
-This repo demonstrates the use of the USART functionality of **stm32f4xx_hal**
-
-It is intended to be used as a template for use with ```cargo generate``
-
-It contains my own well-tested opinions about tools and practices. 
 
 # Hardware Requirements
 
