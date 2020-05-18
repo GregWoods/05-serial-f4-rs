@@ -45,6 +45,8 @@ fn main() -> ! {
         while serial1.write(*byte).is_err() {}
     }
 
+    
+
     loop {
         // Wait for reception of a single byte
         let received = nb::block!(serial1.read()).unwrap();
