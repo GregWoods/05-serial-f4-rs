@@ -13,6 +13,9 @@ It contains my own well-tested opinions about tools and practices.
 * All hardware from aliexpress or your favorite Chinese parts stockist
 * A "**black pill**" board. Get the **stm32f411** board - It has more more memory and faster clock speed than the stm32f401. **Do not** get the black version of the "blue pill" stm32f103 board, as the code is substantially different. ($4)
 * A USB to Serial board. Mine is based on a **CP2102** chip and uses a microUSB cable instead of plugging straight into the USB port ($1)
+* USB-C cable for the black pill
+* microUSB cablefor the CP2102 (if you bought the microUSB variant)
+* You will probably need to solder the pins to the 2 boards
 * Connect the USB-to-serial board to the black pill
 
 | USB-to-serial | Black Pill |
