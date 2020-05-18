@@ -1,10 +1,24 @@
-# stm32f4-05-serial
+# stm32f4-05-serial example using Rust
+
+# Development Environment Prerequisites
+
+* [VS Code](https://code.visualstudio.com/)
+    * Extension: **Cortex-Debug**
+    * Extension: **Rust-Analyser** (IMO works better than RLS)
+    * I think other extensions are installed with the above
+* [Rust and Cargo](https://www.rust-lang.org/tools/install)
+* OpenOCD and gdb (so long ago, I can't remember the details!)
+* Add the STM32F4 target to Rust (```cargo build``` should tell you what to do)
+* [Serial terminal app](https://learn.adafruit.com/windows-tools-for-the-electrical-engineer/serial-terminal)
+* If you use GitHub for your own repos, I recommend you install **[gh](https://github.com/cli/cli)** the GitHub command line interface
+* ```cargo install cargo-generate```
+
 
 ![Hardware required](./docs/images/blackpill-serial-stlink.jpg "Hardware required")
 
-A simple project which runs on the **stm32f411 black pill** board (should also work on the stm32f401 variant)
+A simple project which runs on the **stm32f411 black pill** board (should also work on the stm32f401 variant, although memory.x should be altered to reflect the lower memory of the 401 board)
 
-It demonstrates the use of the USART functionality of **stm32f4xx_hal**
+This repo demonstrates the use of the USART functionality of **stm32f4xx_hal**
 
 It is intended to be used as a template for use with ```cargo generate``
 
@@ -27,19 +41,13 @@ It contains my own well-tested opinions about tools and practices.
 | TXO | PA10 (USART1 RX) |
 | RXI | PA9 (USART1 TX) |
 
-* Connect the USB-to-serial board to the black pill
+* Connect the USB-to-serial board to the black pill (used for the serial test)
 
 | USB-to-serial | Black Pill 4 pin debug header |
 | --- | --- |
 | SWCLK | SWSCK |
 | SWDIO | SWDIO |
 | 3.3V | 3V3 |
-
-
-## Install cargo-generate
-
-if you don't already have it
-```cargo install cargo-generate```
 
 ## Generate your project
 ```
@@ -48,7 +56,6 @@ cargo generate --git https://github.com/gregwoods/stm32f4-05-serial --name your-
 
 ## Set up source control for your project
 
-This step uses **[gh](https://github.com/cli/cli)**, the GitHub cli client.
 ```
 cd your-project-name
 git init
@@ -71,7 +78,7 @@ or
 ### Connect to the usb-to-serial adapter
 
 * Connect the USB-to-serial board to your PC and find its COM port in Deveice Manager (Windows)
-* Use a [serial terminal app](https://learn.adafruit.com/windows-tools-for-the-electrical-engineer/serial-terminal) (e.g Putty) to connect to the serial port at 19200 baud
+* Use a serial terminal to connect to the serial port at 19200 baud
 
 ### Run it
 
